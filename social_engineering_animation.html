@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Engineering Lesson</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .skeleton-icon {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 3rem;
+            text-align: center;
+            opacity: 1;
+            animation: fadeOut 4s forwards;
+        }
+
+        .lesson {
+            font-size: 2rem;
+            text-align: center;
+            opacity: 0;
+            display: none;
+            animation: fadeIn 1s forwards;
+            animation-delay: 4s;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img class="skeleton-icon" src="avatars-KzQzyzzKl8lhloER-7yQnoQ-t1080x1080.jpg" alt="Skeleton Icon">
+    <div class="message">You Hacked!</div>
+    <div class="lesson">This is a lesson in social engineering. Stay alert and think carefully!</div>
+
+    <script>
+        setTimeout(() => {
+            document.querySelector('.message').style.display = 'none';
+            document.querySelector('.lesson').style.display = 'block';
+        }, 4000);
+    </script>
+</body>
+</html>
